@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+:root { --radius: 16px; }
+html { color-scheme: dark; }
+/* aquí puedes añadir utilidades o resets propios si quieres */
+/* helpers */
+.container-px { @apply px-4 sm:px-6 lg:px-8; }
+.card { @apply rounded-2xl shadow-sm border border-white/10 bg-white/5; }

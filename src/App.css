@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+:root { --radius: 16px; }
+html { color-scheme: dark; }
+/* aquí puedes añadir utilidades o resets propios si quieres */
