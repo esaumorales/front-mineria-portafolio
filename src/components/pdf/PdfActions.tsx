@@ -6,16 +6,17 @@ type Props = {
   title?: string
   fileUrl?: string      // URL directa al PDF (ej: /pdfs/doc.pdf)
   sourceUrl?: string    // GitHub u origen
+  viewHref?: string     // URL alternativa para visualizar el PDF
 }
 
-export function PdfActions({ id, title = 'document', fileUrl, sourceUrl }: Props) {
+export function PdfActions({ id, title = 'document', fileUrl, sourceUrl, viewHref }: Props) {
   const [saved, setSaved] = useState<boolean>(() => {
     if (!id) return false
     const raw = localStorage.getItem('saved-pdfs') || '[]'
     return JSON.parse(raw).includes(id)
   })
 
-  const canView = Boolean(fileUrl)
+  const canView = Boolean(fileUrl || viewHref)
   const canDownload = Boolean(fileUrl)
   const canGithub = Boolean(sourceUrl)
   const saveLabel = useMemo(() => (saved ? 'Guardado ✔' : 'Guardar'), [saved])
@@ -42,7 +43,7 @@ export function PdfActions({ id, title = 'document', fileUrl, sourceUrl }: Props
     <div className="grid grid-cols-2 gap-2">
       {canView ? (
         <a
-          href={fileUrl!}
+          href={viewHref || fileUrl!}
           target="_blank"
           rel="noopener noreferrer"
           className="px-3 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-center text-sm"
@@ -50,7 +51,9 @@ export function PdfActions({ id, title = 'document', fileUrl, sourceUrl }: Props
           Ver
         </a>
       ) : (
-        <button disabled className="px-3 py-2 rounded-xl bg-white/5 text-white/40 text-sm">Ver</button>
+        <button disabled className="px-3 py-2 rounded-xl bg-white/5 text-white/40 text-sm">
+          Ver
+        </button>
       )}
 
       <button
