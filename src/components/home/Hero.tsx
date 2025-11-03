@@ -32,8 +32,8 @@ export function Hero() {
       >
         ESAU <span className="text-white/70" style={{ WebkitTextStroke: '0' }}>MORALES</span>
         <br />
-        <span className="text-white/80">BUT YOU CAN CALL ME</span>{' '}
-        <span className="text-[var(--accent,#aab2ff)]" style={{ WebkitTextStroke: '0' }}>ESAU</span>
+        <span className="text-white/80">Universidad Peruana  </span>{' '}
+        <span className="text-[var(--accent,#aab2ff)]" style={{ WebkitTextStroke: '0' }}>Union</span>
       </motion.h1>
 
       <motion.p
@@ -42,8 +42,8 @@ export function Hero() {
         transition={{ delay: 0.15, duration: 0.5 }}
         className="mt-4 text-white/80 text-base sm:text-lg"
       >
-        I’m a graphic-minded front-end dev, UX/UI tinkerer<br className="hidden sm:block" />
-        & data-mining enthusiast.
+        Portafolio Mineria Ciclo VIII<br className="hidden sm:block" />
+        & data-github-pdf.
       </motion.p>
 
       <motion.div
@@ -54,11 +54,11 @@ export function Hero() {
       >
         <Link to="/proyectos" className="group inline-flex items-center gap-2 text-white hover:opacity-90">
           <span className="translate-x-0 group-hover:translate-x-1 transition">→</span>
-          <span className="underline underline-offset-4 decoration-white/30">see my projects</span>
+          <span className="underline underline-offset-4 decoration-white/30">Ver mis proyecos</span>
         </Link>
         <Link to="/acerca" className="group inline-flex items-center gap-2 text-white hover:opacity-90">
           <span className="translate-x-0 group-hover:translate-x-1 transition">→</span>
-          <span className="underline underline-offset-4 decoration-white/30">more about me</span>
+          <span className="underline underline-offset-4 decoration-white/30">Mas acerca de mi</span>
         </Link>
       </motion.div>
     </div>
