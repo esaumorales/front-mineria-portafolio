@@ -123,6 +123,22 @@ export const resources: Resource[] = [
     lang: 'es',
     addedAt: new Date('2025-01-05').toISOString(),
   },
+ {
+    id: 'cris-proyecto',
+    type: 'pdf',
+    title: 'CRIS PROYECTO MINERIA',
+    authors: ['Esau Morales', 'Joshua Alfonzo', 'Roxwell Ramos'],
+    year: 2025,
+    tags: ['proyecto', 'crisdm', 'python'],
+    thumbnails: ['/thumbs/Proyecto.png'],
+    sourceUrl: 'https://github.com/esaumorales/Repositorio-Mineria/blob/master/MD-12%20Redes%20sociales/RedesSociales/RedesSociales.pdf',
+    fileUrl: '/pdf/Proyecto_Grupal/CRISP-DM-PROYECTO.pdf',
+    pages: 10,
+    lang: 'es',
+    addedAt: new Date('2025-01-05').toISOString(),
+  },
+
+
   {
     id: 'kaggle-links',
     type: 'link',
